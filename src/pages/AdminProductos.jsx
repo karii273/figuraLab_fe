@@ -264,4 +264,8 @@ export default function AdminProductos() {
       <Footer />
     </>
   );
+
+
+
+  
 }
