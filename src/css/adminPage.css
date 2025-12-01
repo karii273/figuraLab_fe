@@ -1,0 +1,25 @@
+
+body {
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+h1 {
+    margin: auto;
+}
+
+.btn-outline-warning {
+  color: black !important;
+  border-color: #ffc107 !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:active,
+.btn-outline-warning:focus {
+  color: black !important;
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
+
