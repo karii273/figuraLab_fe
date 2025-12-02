@@ -50,7 +50,6 @@ export default function Registro() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <div className="mb-3">
             <label className="form-label">Contraseña</label>
             <input
@@ -60,14 +59,12 @@ export default function Registro() {
               onChange={(e) => setPass(e.target.value)}
             />
           </div>
-
           <button className="btn btn-warning w-100 mt-3" type="submit">
             Registrarse
           </button>
           <BackButton/>
         </form>
-      </div>
-      
+      </div> 
       <Footer />
     </>
   );

@@ -13,7 +13,7 @@ const productsData = {
       body: JSON.stringify(prod),
     });
 
-    return await res.json(); // ← DEVOLVER PRODUCTO CREADO
+    return await res.json();
   },
 
   async deleteProduct(id) {
@@ -21,20 +21,18 @@ const productsData = {
       method: "DELETE",
     });
 
-    return await res.json(); // ← DEVOLVER RESPUESTA
+    return await res.json();
   },
 
   async updateProduct(id, newProd) {
-    // Eliminamos ID duplicado del body
     const { id: _, ...prodSinId } = newProd;
-
     const res = await fetch(`${API_URL}/products/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(prodSinId),
     });
 
-    return await res.json(); // ← DEVOLVER PRODUCTO ACTUALIZADO
+    return await res.json();
   },
 };
 

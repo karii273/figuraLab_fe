@@ -23,7 +23,6 @@ export default function Categorias() {
           {categorias.map((c, i) => (
             <CatalogoItem key={i} {...c} />
           ))}
-
         </div>
       </div>
       <BackButton/>

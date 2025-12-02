@@ -10,15 +10,12 @@ export default function Catalogo() {
   return (
     <>
       <NavBar />
-
       <div className="container my-5">
         <h2 className="text-center mb-4">Catálogo Completo</h2>
-
         <div className="row">
           {products.length === 0 && (
             <p className="text-muted">No hay productos disponibles.</p>
           )}
-
           {products.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
