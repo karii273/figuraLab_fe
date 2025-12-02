@@ -30,9 +30,6 @@ export default function AdminProductos() {
     category: "",
   });
 
-  // -------------------------------------------
-  // Cargar productos desde el backend
-  // -------------------------------------------
   async function loadProducts() {
     const res = await fetch(`${API_URL}/products`);
     const data = await res.json();
@@ -43,9 +40,6 @@ export default function AdminProductos() {
     loadProducts();
   }, []);
 
-  // -------------------------------------------
-  // Abrir modal Agregar
-  // -------------------------------------------
   function openAddModal() {
     setIsEdit(false);
     setForm({
@@ -59,18 +53,12 @@ export default function AdminProductos() {
     setModalOpen(true);
   }
 
-  // -------------------------------------------
-  // Abrir modal Editar
-  // -------------------------------------------
   function openEditModal(prod) {
     setIsEdit(true);
     setForm(prod);
     setModalOpen(true);
   }
 
-  // -------------------------------------------
-  // Eliminar (DELETE correcto)
-  // -------------------------------------------
   async function handleDelete(id) {
     if (!confirm("¿Seguro que deseas eliminar este producto?")) return;
 
@@ -81,9 +69,6 @@ export default function AdminProductos() {
     loadProducts();
   }
 
-  // -------------------------------------------
-  // Guardar cambios (PUT o POST)
-  // -------------------------------------------
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -97,7 +82,6 @@ export default function AdminProductos() {
       category: form.category,
     };
 
-    // EDITAR
     if (isEdit) {
       await fetch(`${API_URL}/products/${form.id}`, {
         method: "PUT",
@@ -105,7 +89,7 @@ export default function AdminProductos() {
         body: JSON.stringify(body),
       });
     }
-    // AGREGAR
+
     else {
       await fetch(`${API_URL}/products`, {
         method: "POST",
@@ -118,9 +102,6 @@ export default function AdminProductos() {
     loadProducts();
   }
 
-  // -------------------------------------------
-  // Vista si no es admin
-  // -------------------------------------------
   if (!isAdmin) {
     return (
       <>
@@ -133,9 +114,6 @@ export default function AdminProductos() {
     );
   }
 
-  // -------------------------------------------
-  // Vista normal
-  // -------------------------------------------
   return (
     <>
       <NavBar />
@@ -193,7 +171,6 @@ export default function AdminProductos() {
         </div>
       </div>
 
-      {/* Modal */}
       {modalOpen && (
         <div className="modal-backdrop-custom">
           <div className="modal-card">
@@ -260,12 +237,7 @@ export default function AdminProductos() {
           </div>
         </div>
       )}
-
       <Footer />
     </>
   );
-
-
-
-  
 }

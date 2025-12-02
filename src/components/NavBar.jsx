@@ -9,7 +9,6 @@ export default function NavBar() {
       <nav className="navbar navbar-expand-lg bg-warning-subtle shadow-sm w-100">
         <div className="container-fluid">
 
-          {/* Logo */}
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img
               src="/img/reno.png"
@@ -21,7 +20,6 @@ export default function NavBar() {
             <span className="fw-bold">FIGURA LAB</span>
           </Link>
 
-          {/* Botón mobile */}
           <button
             className="navbar-toggler"
             type="button"
@@ -31,7 +29,6 @@ export default function NavBar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Menú */}
           <div className="collapse navbar-collapse" id="navbarContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
@@ -41,7 +38,6 @@ export default function NavBar() {
                 </Link>
               </li>
 
-              {/* Admin */}
               {isAdmin && (
                 <>
                   <li className="nav-item">
@@ -59,7 +55,6 @@ export default function NavBar() {
               )}
             </ul>
 
-            {/* No logueado */}
             {!isLogged && (
               <>
                 <Link className="btn btn-outline-warning ms-2" to="/registro">
@@ -72,7 +67,6 @@ export default function NavBar() {
               </>
             )}
 
-            {/* Logueado */}
             {isLogged && (
               <button
                 className="btn btn-outline-danger ms-2"

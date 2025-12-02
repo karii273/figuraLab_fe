@@ -9,7 +9,6 @@ export default function Contacto() {
   const [correo, setCorreo] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [enviado, setEnviado] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -19,7 +18,6 @@ export default function Contacto() {
     }
 
     setEnviado(true);
-
     setNombre("");
     setCorreo("");
     setMensaje("");

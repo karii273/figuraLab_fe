@@ -42,10 +42,8 @@ export default function AdminUsuarios() {
   return (
     <>
       <NavBar />
-
       <div className="container my-5">
         <h2 className="text-center mb-4">Administración de Usuarios</h2>
-
         <div className="table-responsive">
           <table className="table table-striped table-bordered shadow">
             <thead className="table-dark">
@@ -56,14 +54,12 @@ export default function AdminUsuarios() {
                 <th style={{ width: "120px" }}>Acciones</th>
               </tr>
             </thead>
-
             <tbody>
               {users.map((u) => (
                 <tr key={u.email}>
                   <td>{u.name}</td>
                   <td>{u.email}</td>
                   <td>{u.role}</td>
-
                   <td>
                     <button
                       className="btn btn-danger btn-sm"
@@ -75,11 +71,9 @@ export default function AdminUsuarios() {
                 </tr>
               ))}
             </tbody>
-
           </table>
         </div>
       </div>
-
       <Footer />
     </>
   );

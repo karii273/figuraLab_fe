@@ -2,8 +2,8 @@
 body {
     background-size: cover;
     background-position: center;
-    max-width: 1500px; /* Ancho máximo del contenido */
-    margin: 0 auto;    /* Centra el contenido */
+    max-width: 1500px; 
+    margin: 0 auto;    
 }
 
 .catalogo-item {
@@ -27,16 +27,16 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0); /* Invisible por defecto */
+    background: rgba(255, 255, 255, 0); 
     transition: background 1.5s ease-in-out;
 }
 
 .catalogo-item:hover::after {
-    background: rgba(255, 255, 255, 0.4); /* Capa blanca al pasar el mouse */
+    background: rgba(255, 255, 255, 0.4);
     color: black;
 }
 
 .catalogo-item span {
     position: relative;
-    z-index: 1; /* Siempre arriba del overlay */
+    z-index: 1; 
 }

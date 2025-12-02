@@ -21,7 +21,6 @@ body {
     transition: transform 0.2s;
 }
 
-/*sombra del cuadrado*/
 .item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
@@ -34,7 +33,6 @@ body {
     transition: all .5s;
 }
 
-/*para que no sobresalga del borde de la imagen cuando escala*/
 .item figure {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
@@ -56,17 +54,15 @@ body {
 .carousel-item img {
     width: 100%;
     height: 500px;
-    /* 🔹 Ajusta el alto que prefieras */
     object-fit: cover;
-    /* Mantiene proporción y recorta */
     object-position: center;
 }
 
 .card a {
-  text-decoration: none; /* quita el subrayado */
-  color: inherit;        /* usa el mismo color del texto normal */
+  text-decoration: none;
+  color: inherit;
 }
 
 .card a:hover {
-  color: #0d6efd;        /* si quieres que al pasar el mouse cambie a azul Bootstrap */
+  color: #0d6efd;
 }

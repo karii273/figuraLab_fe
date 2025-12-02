@@ -14,7 +14,6 @@ export default function Login() {
     e.preventDefault();
     setError(null);
 
-    // Validación de dominio permitido
     const allowedDomains = ["gmail.com", "gmail.cl", "duocuc.cl"];
     const emailDomain = email.split("@")[1];
 
@@ -23,7 +22,6 @@ export default function Login() {
       return;
     }
 
-    // Intentar login
     const res = await login(email, pass);
 
     if (!res.ok) {
@@ -36,7 +34,6 @@ export default function Login() {
   return (
     <>
       <NavBar />
-
       <div className="container my-5" style={{ maxWidth: "500px" }}>
         <h2 className="text-center mb-4">Iniciar Sesión</h2>
 
@@ -64,14 +61,12 @@ export default function Login() {
               placeholder="*****"
             />
           </div>
-
           <button className="btn btn-warning w-100 mt-3" type="submit">
             Ingresar
           </button>
           <BackButton />
         </form>
       </div>
-
       <Footer />
     </>
   );

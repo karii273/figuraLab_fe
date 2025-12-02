@@ -71,7 +71,6 @@ button:focus-visible {
   }
 }
 
-/* El navbar y footer SIEMPRE deben ocupar el ancho completo */
 header, nav.navbar, footer {
   width: 100% !important;
   max-width: 100% !important;
@@ -79,7 +78,6 @@ header, nav.navbar, footer {
   padding: 0 !important;
 }
 
-/* Ninguna página puede encogerlos */
 header * {
   max-width: none !important;
 }
